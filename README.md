@@ -91,8 +91,3 @@ Contributions are welcome!
 Fork the repo and submit a pull request. For major changes, open an issue first to discuss.
 
 ---
-
-## 🙏 Acknowledgements
-- Hugging Face
-- NLTK
-- spaCy
