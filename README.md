@@ -30,10 +30,28 @@ A web-based text summarization tool that uses **Natural Language Processing (NLP
 
 ## 📦 Installation & Setup
 
-### 1️⃣ Clone the Repository
-bash
-git clone https://github.com/yourusername/text-summarizer.git
-cd text-summarizer
+# 1. Clone the repository
+git clone https://github.com/pratham468/Text-summarizer.git
+cd Text-summarizer
+
+# 2. (Optional) Create and activate a virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# 3. Install backend dependencies
+pip install -r requirements.txt
+
+# 4. Install frontend dependencies (if any)
+cd text-summarizer-client
+npm install
+
+# 5. Run the backend server
+cd ..
+python app.py  # or: uvicorn app:app --reload (if using FastAPI)
+
+# 6. Run the frontend
+cd text-summarizer-client
+npm start
 
 
 
