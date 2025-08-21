@@ -1,64 +1,98 @@
-# 📝 Text Summarizer Web App
+# 📝 Text Summarizer
 
-A web-based text summarization tool that uses **Natural Language Processing (NLP)** to generate concise and meaningful summaries from large text inputs. Built with **Python** for the backend logic and **React.js** for the frontend.
+A lightweight text summarization tool built with Python. Easily generate concise summaries from large blocks of text using extractive/abstractive methods.
 
 ---
 
 ## 🚀 Features
-- **Machine Learning Powered** – Uses NLP algorithms (TextRank) for accurate extractive summarization.
-- **Interactive UI** – Built with React.js for a smooth user experience.
-- **Progress Indicator** – Shows summarization status in real time.
-- **Dark/Light Mode** – Toggle between themes with animations.
-- **Toast Notifications** – Instant feedback for success/error messages.
-- **Responsive Design** – Works on mobile, tablet, and desktop.
+- Summarize input text instantly.
+- Adjustable summary length.
+- Supports extractive/abstractive summarization methods.
+- Optional web interface or CLI (depending on setup).
+- Clean and intuitive UI (if deployed).
 
 ---
 
 ## 🛠 Tech Stack
-**Frontend**
-- React.js
-- Tailwind CSS
-- React-Toastify
-
-**Backend**
-- Python
-- Flask / FastAPI (choose based on your implementation)
-- NLTK / spaCy
-- TextRank Algorithm
+- **Language:** Python 3.x
+- **Libraries/Frameworks:** Flask/FastAPI (if web), NLTK, spaCy, Transformers, Hugging Face (if used)
+- **Other Tools:** Virtual Environment, Requirements.txt
 
 ---
 
 ## 📦 Installation & Setup
 
-# 1. Clone the repository
+### 1. Clone the repository
+```bash
 git clone https://github.com/pratham468/Text-summarizer.git
 cd Text-summarizer
+```
 
-# 2. (Optional) Create and activate a virtual environment
+### 2. Create and activate a virtual environment
+```bash
 python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate     # On Windows: venv\Scripts\activate
+```
 
-# 3. Install backend dependencies
+### 3. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-# 4. Install frontend dependencies (if any)
-cd text-summarizer-client
-npm install
+### 4. Run the application
+- **If script-based summarizer:**
+```bash
+python app.py   # or main.py, summarizer.py depending on your entry file
+```
 
-# 5. Run the backend server
-cd ..
-python app.py  # or: uvicorn app:app --reload (if using FastAPI)
+- **If web app:**
+```bash
+flask run
+# OR (if FastAPI)
+uvicorn main:app --reload
+```
 
-# 6. Run the frontend
-cd text-summarizer-client
-npm start
+---
 
+## 📖 Usage Examples
 
+### CLI Example
+```bash
+python app.py --input "Paste your text here" --length 0.3
+```
 
-📄 License
+### Web Example
+- Visit: `http://localhost:5000`
+- Paste your text and click **Summarize**
 
-This project is licensed under the MIT License – you are free to use and modify it.
+---
 
-🤝 Contributing
+## 📂 Folder Structure
+```
+Text-summarizer/
+├── app.py (or main.py)
+├── requirements.txt
+├── summarizer.py
+├── templates/       # (if web interface)
+│   ├── index.html
+│   └── ...
+└── static/          # (CSS/JS if any)
+```
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+---
+
+## 📄 License
+This project is licensed under the **MIT License**.
+
+---
+
+## 🤝 Contributing
+Contributions are welcome!  
+Fork the repo and submit a pull request. For major changes, open an issue first to discuss.
+
+---
+
+## 🙏 Acknowledgements
+- Hugging Face
+- NLTK
+- spaCy
